@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: async-logger
-          image: YOUR_DOCKER_USERNAME/async-logger:v1
+          image: eddyjayiseh/async-logger:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
