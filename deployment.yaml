@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: async-logger
+  namespace: async-logger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: async-logger
+  template:
+    metadata:
+      labels:
+        app: async-logger
+    spec:
+      containers:
+        - name: async-logger
+          image: YOUR_DOCKER_USERNAME/async-logger:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
